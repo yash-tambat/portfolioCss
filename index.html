@@ -25,7 +25,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      
       padding: 0 20px;
       height: 85px;
       background-color: rgb(18, 18, 62);
@@ -47,10 +47,10 @@
 
     nav .right ul {
       display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
+    
+      gap: 100px;
       list-style: none;
-      margin-left: 500px; /* Shift ul to the right */
+      
     }
 
     nav ul li a {
@@ -156,7 +156,8 @@
     /* Responsive Design */
     @media (max-width: 768px) {
       nav {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items:center;
         justify-content:space-around;
         height: auto;
@@ -171,10 +172,10 @@
       }
 
       nav .right ul {
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         align-items:center;
-        gap: 10px;
+        gap: 15px;
         margin-top: 10px;
         margin-left: 25px;
       }
@@ -204,9 +205,7 @@
       }
     }
 
-    .left {
-      color: rgb(172, 104, 236);
-    }
+   
     
   </style>
 </head>
@@ -214,7 +213,7 @@
 <body>
   <header>
     <nav>
-      <div class="left">Yash Portfolio</div>
+      
       <div class="right">
         <ul>
           <li><a href="index.html">Home</a></li>

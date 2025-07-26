@@ -69,6 +69,49 @@
       height: auto;
       border-radius: 10px;
     }
+     nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      padding: 0 20px;
+      height: 85px;
+      background-color: rgb(18, 18, 62);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .left {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav .right ul {
+      display: flex;
+    
+      gap: 100px;
+      list-style: none;
+      
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: rgb(152, 152, 218);
+      font-size: 1.01rem;
+    }
+    
 
     /* 🔽 Media Query for Small Screens */
     @media (max-width: 768px) {
@@ -95,20 +138,67 @@
       .box2 {
         margin-top: 30px;
       }
+      
+      .left{
+        color: rgb(175, 118, 228);
+        font-size: 1.5rem;
+       font-weight: bold;
+      }
+      nav {
+        flex-direction: row;
+        align-items:center;
+        justify-content:space-around;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      nav .right {
+        width: 100%;
+        justify-content:space-around;
+        display: flex;
+        align-items: center;
+      }
+
+      nav .right ul {
+        flex-direction: row;
+        width: 100%;
+        align-items:center;
+        gap: 15px;
+        margin-top: 10px;
+        margin-left: 25px;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+
     }
     
   </style>
 </head>
 
 <body>
-    
+      <header>
+    <nav>
+      
+      <div class="right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <main>
     <section class="first">
       <div class="box1">
         <h1>About Me</h1>
 
         <li>
-          My name is <span class="pup">Yash Tambat</span>, and I’m a recent graduate in Electronics and Telecommunication
+          My name is <span class="pup"><strong>Yash Tambat</strong></span>, and I’m a recent graduate in Electronics and Telecommunication
           Engineering (BE), driven by a strong interest in the IT industry, particularly in Frontend Development and Data
           Analysis. My academic journey began with a Diploma in ENTC Engineering, which I completed in 2022, and later
           progressed to earning my Bachelor’s degree, where I successfully graduated with a commendable 8.0 CGPA.
@@ -116,9 +206,9 @@
 
         <li>
           Over time, I have developed a versatile skill set that spans multiple areas of technology. On the development
-          side, I am proficient in <span class="pup">HTML, CSS, and JavaScript</span>. I’m also well-versed in C, C++,
-          and Python. In the data domain, <span class="pup">I have hands-on experience with Excel, Power BI, and SQL
-            databases</span>, enabling me to work on data-driven projects and visualize insights.
+          side, I am proficient in <span class="pup"><strong>HTML, CSS, and JavaScript</strong></span>. I’m also well-versed in C, C++,
+          and Python. In the data domain, <span class="pup"><strong>I have hands-on experience with Excel, Power BI, and SQL
+            databases</strong></span>, enabling me to work on data-driven projects and visualize insights.
         </li>
 
         <li>

@@ -19,7 +19,7 @@
       background-color: #000021;
       color: white;
       line-height: 1.6;
-      padding: 20px;
+     
     }
 
     h1 {
@@ -72,14 +72,81 @@
       height: auto;
       object-fit: cover;
     }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      padding: 0 20px;
+      height: 85px;
+      background-color: rgb(18, 18, 62);
+     
+      top: 0;
+      left: 0;
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
+      z-index: 1000;
+    }
+
+    nav .left {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav .right ul {
+      display: flex;
+    
+      gap: 100px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: rgb(152, 152, 218);
+      font-size: 1.01rem;
+    }
+
+    @media (max-width: 600px) {
+    
 
       .project-card {
         padding: 15px;
+      }
+        nav {
+        flex-direction: row;
+        align-items:center;
+        justify-content:center;
+      }
+
+      nav .right {
+        width: 100%;
+        justify-content:center;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+      }
+
+      nav .right ul {
+        flex-direction: row;
+        width: 100%;
+        align-items:center;
+        gap: 15px;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+
+      nav ul li {
+        margin: 0;
       }
     }
    
@@ -89,6 +156,20 @@
 </head>
 
 <body>
+     <header>
+    <nav>
+     
+      <div class="right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
     
   <main>
     <h1>My Projects</h1>
