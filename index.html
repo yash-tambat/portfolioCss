@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Tambat - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(0, 0, 33);
+      color: white;
+      font-family: "Roboto", sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 20px;
+      height: 85px;
+      background-color: rgb(18, 18, 62);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .left {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav .right ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      list-style: none;
+      margin-left: 500px; /* Shift ul to the right */
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: rgb(152, 152, 218);
+      font-size: 1.01rem;
+    }
+
+    .firstsection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 130px 0;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    .firstsection > div {
+      width: 40%;
+      min-width: 300px;
+    }
+
+    .leftsection {
+      font-size: 2.8rem;
+      padding-left: 10px;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      background-color: rgb(2, 2, 47);
+      color: white;
+      border: 2px solid white;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .rightsection img {
+      max-width: 100%;
+      height: auto;
+      margin: 40px 0;
+    }
+
+    .purple {
+      color: rgb(165, 101, 225);
+    }
+
+    #element {
+      color: rgb(165, 101, 225);
+    }
+
+    .secondsection {
+      max-width: 85vw;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .secondsection h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .secondsection h2 {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: rgb(195, 172, 248);
+    }
+
+    .secondsection p,
+    .secondsection li {
+      margin: 8px 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .grey {
+      color: gray;
+      font-size: 1rem;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: rgb(103, 21, 180);
+      margin: 30px 80px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items:center;
+        justify-content:space-around;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      nav .right {
+        width: 100%;
+        justify-content:space-around;
+        display: flex;
+        align-items: center;
+      }
+
+      nav .right ul {
+        flex-direction: column;
+        width: 100%;
+        align-items:center;
+        gap: 10px;
+        margin-top: 10px;
+        margin-left: 25px;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+
+      .firstsection {
+        flex-direction: column;
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .leftsection {
+        font-size: 2.2rem;
+        padding: 0;
+        text-align: center;
+      }
+
+      .rightsection {
+        margin-top: 20px;
+      }
+
+      .rightsection img {
+        max-width: 80%;
+      }
+    }
+
+    .left {
+      color: rgb(172, 104, 236);
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">Yash Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="firstsection">
+      <div class="leftsection">
+        Hi, My name is <div><span class="purple">Yash Tambat</span></div>
+        <div>And I am a passionate</div>
+        <span id="element"></span>
+
+        <div class="button">
+          <button class="btn"><a href="docs/yashresume.pdf.pdf" target="_blank">Download Resume</a></button>
+        </div>
+      </div>
+
+      <div class="rightsection">
+        <img src="https://png.pngtree.com/png-vector/20240309/ourmid/pngtree-developers-are-coding-programs-on-computers-programmers-are-analyzing-data-png-image_11902650.png"
+          alt="Yash Tambat Coding" />
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="secondsection">
+      <span class="grey">What I have done so far</span>
+      <h1>Work Experience</h1>
+
+      <h2>Web Developer Intern at Intern PE</h2>
+      <ul>
+        <li>Gained hands-on experience in web development, working with HTML, CSS, and JavaScript.</li>
+        <li>Assisted in designing, developing, and testing responsive web applications.</li>
+        <li>Collaborated with the team to troubleshoot and debug technical issues.</li>
+        <li>Built interactive and responsive web pages using HTML, CSS, and JavaScript.</li>
+        <li>Implemented user-friendly designs and optimized performance for different screen sizes.</li>
+      </ul>
+    </section>
+
+    <hr />
+  </main>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['ENTC Engineer', 'Frontend Developer', 'Data Analyst'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: #000021;
+      color: white;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #9151cc;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .project-card {
+      background-color: #11113a;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 500px;
+      flex: 1 1 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-card h2 {
+      color: #b689e0;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .project-card li {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .images {
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .images img {
+      border-radius: 8px;
+      width: 150px;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .project-card {
+        padding: 15px;
+      }
+    }
+   
+
+    
+  </style>
+</head>
+
+<body>
+    
+  <main>
+    <h1>My Projects</h1>
+    <section>
+      <div class="project-card">
+        <h2>Spotify Clone (Music Streaming Website)</h2>
+        <ul>
+          <li>Developed a responsive music streaming website inspired by Spotify using HTML, CSS, and JavaScript.</li>
+          <li>Created an intuitive UI with seamless music playback and playlist management features.</li>
+          <li>Built a custom audio player with play, pause, and skip options.</li>
+          <li>Implemented responsive design and modern UI/UX principles.</li>
+          <li>Added support for real-time song progress tracking and seek bar functionality.</li>
+          <li>Used CSS Flexbox/Grid for clean, scalable layout across devices.</li>
+          <li>Applied hover effects, animations, and transitions for an interactive user experience.</li>
+          <li>Organized code with modular structure for better readability and maintainability.</li>
+
+
+
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h2>Smart Wearable Suit For Coal Miners (LORA-based)</h2>
+        <ul>
+          <li>Designed a suit with real-time monitoring sensors for gas, temperature, heart rate, and oxygen levels.</li>
+          <li>Used wireless LORA communication to transmit data to a central monitoring system.</li>
+          <li>Included an SOS alert feature for emergency situations.</li>
+          <li>Demonstrated IoT and embedded system skills for industrial safety.</li>
+        </ul>
+        <div class="images">
+          <img src="img/ckt.png.jpg" alt="Circuit Design">
+          <img src="img/thesis.png.jpg" alt="Thesis Image">
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2>Sales Data Analysis and Reporting (MySQL)</h2>
+        <ul>
+          <li>Converted raw CSV files into normalized MySQL tables for retail data.</li>
+          <li>Created queries using JOIN, GROUP BY, and HAVING to analyze performance.</li>
+          <li>Used RANK() and ROW_NUMBER() functions to find top customers and trends.</li>
+          <li>Enabled data-driven decision making through structured reporting.</li>
+          <li>Performed data cleaning and handled missing/null values during data import.</li>
+          <li>Applied aggregate functions like SUM(), AVG(), COUNT() for KPIs such as total sales, average order value, etc.</li>
+          <li>Built custom dashboards or exported results to Excel/CSV for stakeholder reporting.</li>
+          <li>Optimized queries using indexes and analyzed query performance.</li>
+
+
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

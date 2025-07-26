@@ -1,0 +1,104 @@
+
+
+  /* Custom styles for Inter font and general body styling */
+  body {
+      font-family: 'Inter', sans-serif;
+      background-color: rgb(0, 0, 33);
+      /* Dark blue background */
+  }
+
+  /* Focus styles for input fields */
+  input:focus,
+  textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+      /* Blue focus ring */
+      border-color: #4299e1;
+      /* Blue border on focus */
+  }
+
+
+
+  /* media query for mobile*/
+
+
+
+
+  /* For tablets and below (width ≤ 768px) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .firstsection,
+  .first,
+  .yt,
+  .yy {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .firstsection > div,
+  .box1,
+  .box2,
+  .container,
+  .container1,
+  .ty {
+    width: 90%;
+    text-align: center;
+  }
+
+  .leftsection {
+    font-size: 2.2rem;
+  }
+
+  .rightsection img,
+  .box2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  main h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* For mobile phones (width ≤ 480px) */
+@media (max-width: 480px) {
+  .leftsection {
+    font-size: 1.6rem;
+  }
+
+  nav .left {
+    font-size: 1.2rem;
+  }
+
+  .secondsection h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+

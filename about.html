@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About-Yash</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(0, 0, 33);
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .first {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box1 {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+    }
+
+    .box1 h1 {
+      font-size: 45px;
+      color: rgb(145, 81, 204);
+      margin-bottom: 20px;
+    }
+
+    .box1 li {
+      list-style: none;
+      padding: 15px 0;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .pup {
+      color: rgb(165, 101, 225);
+    }
+
+    .box2 {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box2 img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* 🔽 Media Query for Small Screens */
+    @media (max-width: 768px) {
+      .first {
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .box1, .box2 {
+        width: 100%;
+        text-align: left;
+      }
+
+      .box1 h1 {
+        font-size: 35px;
+        text-align: center;
+      }
+
+      .box1 li {
+        font-size: 15px;
+        padding: 10px 0;
+      }
+
+      .box2 {
+        margin-top: 30px;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+    
+  <main>
+    <section class="first">
+      <div class="box1">
+        <h1>About Me</h1>
+
+        <li>
+          My name is <span class="pup">Yash Tambat</span>, and I’m a recent graduate in Electronics and Telecommunication
+          Engineering (BE), driven by a strong interest in the IT industry, particularly in Frontend Development and Data
+          Analysis. My academic journey began with a Diploma in ENTC Engineering, which I completed in 2022, and later
+          progressed to earning my Bachelor’s degree, where I successfully graduated with a commendable 8.0 CGPA.
+        </li>
+
+        <li>
+          Over time, I have developed a versatile skill set that spans multiple areas of technology. On the development
+          side, I am proficient in <span class="pup">HTML, CSS, and JavaScript</span>. I’m also well-versed in C, C++,
+          and Python. In the data domain, <span class="pup">I have hands-on experience with Excel, Power BI, and SQL
+            databases</span>, enabling me to work on data-driven projects and visualize insights.
+        </li>
+
+        <li>
+          In addition to my technical expertise, I consider my communication, teamwork, and leadership skills to be some
+          of my strongest assets. I speak Marathi, Hindi, and English, which helps me connect with diverse people and
+          work in multicultural environments.
+        </li>
+      </div>
+
+      <div class="box2">
+        <img src="img/yash3.png.png" alt="Yash Image" />
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

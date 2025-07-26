@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-4">
+    <!-- Form container background changed to dark blue, text to white -->
+    <div class="bg-[rgb(0,0,33)] p-8 rounded-xl shadow-lg w-full max-w-lg text-white">
+        <h2 class="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
+        <p class="mb-8 text-center">
+            Have a question, a project in mind, or just want to say hello? Fill out the form below, and I'll get back to
+            you as soon as possible!
+        </p>
+
+        <!-- Form without action/method for client-side only handling -->
+        <form id="contactForm" class="space-y-6">
+            <div>
+                <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                <input type="text" id="name" name="name" required
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 text-gray-900 bg-white
+                              focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out">
+                <p id="nameError" class="text-red-300 text-xs mt-1 hidden">Please enter your name.</p>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                <input type="email" id="email" name="email" required
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 text-gray-900 bg-white
+                              focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out">
+                <p id="emailError" class="text-red-300 text-xs mt-1 hidden">Please enter a valid email address.</p>
+            </div>
+
+            <div>
+                <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+                <input type="text" id="subject" name="subject" required
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 text-gray-900 bg-white
+                              focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out">
+                <p id="subjectError" class="text-red-300 text-xs mt-1 hidden">Please enter a subject.</p>
+            </div>
+
+            <div>
+                <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                <textarea id="message" name="message" rows="5" required
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 text-gray-900 bg-white
+                                 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out"></textarea>
+                <p id="messageError" class="text-red-300 text-xs mt-1 hidden">Please enter your message.</p>
+            </div>
+
+            <div>
+                <button type="submit" id="submitButton"
+                    class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600
+                               hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                    Send Message
+                </button>
+            </div>
+        </form>
+
+        <!-- Message Box for success/error -->
+        <div id="messageBox" class="mt-6 p-4 rounded-md text-center hidden" role="alert">
+            <p id="messageText" class="font-medium"></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const messageBox = document.getElementById('messageBox');
+            const messageText = document.getElementById('messageText');
+            const submitButton = document.getElementById('submitButton');
+
+            // Function to show a message in the message box
+            function showMessage(message, type = 'success') {
+                messageText.textContent = message;
+                // Adjust colors for message box to be visible on dark background
+                messageBox.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+                if (type === 'success') {
+                    messageBox.classList.add('bg-green-700', 'text-white'); // Darker green for success
+                } else {
+                    messageBox.classList.add('bg-red-700', 'text-white'); // Darker red for error
+                }
+                // Automatically hide the message after 5 seconds
+                setTimeout(() => {
+                    messageBox.classList.add('hidden');
+                }, 5000);
+            }
+
+            // Function to validate email format
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission (which would try to send to a server)
+
+                let isValid = true;
+
+                // Clear previous errors
+                // Changed error text color to red-300 for better visibility on dark background
+                document.querySelectorAll('.text-red-300').forEach(el => el.classList.add('hidden'));
+
+                // Validate Name
+                const nameInput = document.getElementById('name');
+                if (nameInput.value.trim() === '') {
+                    document.getElementById('nameError').classList.remove('hidden');
+                    isValid = false;
+                }
+
+                // Validate Email
+                const emailInput = document.getElementById('email');
+                if (!isValidEmail(emailInput.value.trim())) {
+                    document.getElementById('emailError').classList.remove('hidden');
+                    isValid = false;
+                }
+
+                // Validate Subject
+                const subjectInput = document.getElementById('subject');
+                if (subjectInput.value.trim() === '') {
+                    document.getElementById('subjectError').classList.remove('hidden');
+                    isValid = false;
+                }
+
+                // Validate Message
+                const messageInput = document.getElementById('message');
+                if (messageInput.value.trim() === '') {
+                    document.getElementById('messageError').classList.remove('hidden');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    // Simulate submission success
+                    submitButton.disabled = true; // Disable button
+                    submitButton.textContent = 'Message Sent!'; // Change text
+
+                    showMessage('Thank you for your message! This is a simulated submission.', 'success');
+                    contactForm.reset(); // Clear the form
+
+                    // Re-enable button after a short delay
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send Message';
+                    }, 2000); // Re-enable after 2 seconds
+                } else {
+                    showMessage('Please correct the errors in the form.', 'error');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
