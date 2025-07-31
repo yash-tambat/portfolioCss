@@ -36,7 +36,7 @@
     h2 {
       font-size: 28px;
       color: rgb(171, 111, 227);
-      margin: 40px 0 20px 0;
+      margin: 40px 15px 20px 15px;
       padding: 10px 0;
     }
 
@@ -58,8 +58,10 @@
 
     .skill-box img {
       width: 100px;
-      height: auto;
+      height: 100px;
       object-fit: contain;
+      padding: 10px;
+      margin:  0px 5px;
     }
 
     .skill-title {
@@ -122,6 +124,9 @@
       color: rgb(152, 152, 218);
       font-size: 1.01rem;
     }
+    .section-gridection-left{
+      padding: 10px;
+    }
 
     @media (max-width: 768px) {
       h1 {
@@ -130,6 +135,7 @@
 
       h2 {
         font-size: 22px;
+        margin:15px;
       }
 
       .skill-box {
@@ -166,7 +172,16 @@
       nav ul li {
         margin: 0;
       }
+       .skill-box:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
     }
+    .skill-box:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+    
   </style>
 </head>
 
@@ -189,7 +204,7 @@
     <h1>Skills</h1>
 
     <!-- Programming Languages -->
-    <h2>Programming Languages</h2>
+    <h2><span id="ty">Programming Languages</span></h2>
     <section class="section-grid section-left">
       <div class="skill-box">
         <img src="img/pngegg.png" alt="C" />
@@ -253,9 +268,18 @@
         <div class="skill-title">NumPy</div>
       </div>
       <div class="skill-box">
-        <img src="img/Daco_4429725.png" alt="Pandas" width="120" />
+        <img src="img/Daco_4429725.png" alt="Pandas"  height="300"/>
         <div class="skill-title">Pandas</div>
       </div>
+       <div class="skill-box">
+        <img src="img/matplotlib.png" alt="Matplotib" width="120" />
+        <div class="skill-title">Matplotlib</div>
+      </div>
+       <div class="skill-box">
+        <img src="img/Seaborn1.png" alt="Seaborn" width="120" />
+        <div class="skill-title">Seaborn</div>
+      </div>
+
     </section>
 
     <!-- Tools -->
